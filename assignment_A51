@@ -1,0 +1,34 @@
+/*Create a Class consisting of 3 data members each of unsigned integer type. Initialize them to 45,78, and 90. Use the display function to print the values on the console.*/
+
+
+class myclass;
+  
+  bit [31:0] num0; 
+  bit [31:0] num1; 
+  bit [31:0] num2;  
+  
+  
+endclass 
+
+
+
+
+module tb();
+  
+  myclass m;
+  
+  initial begin
+    m = new();
+    #1;
+    m.num0 = 45;
+    m.num1 = 78;
+    m.num2 = 90; 
+    
+    $display("NUM0 %0d NUM1:%0d NUM2:%0d ",m.num0, m.num1, m.num2);
+  end 
+  
+  
+  
+  
+  
+endmodule 
